@@ -30,8 +30,8 @@ export class App {
 
   // Patrones básico de signal
   public count: WritableSignal<number> = signal(0);
-  public doubleCount: Signal<number> = computed(() => this.count() * 2);
-  public isEven: Signal<boolean> = computed(() => this.count() % 2 === 0);
+  public readonly doubleCount: Signal<number> = computed((): number => this.count() * 2);
+  public readonly isEven: Signal<boolean> = computed((): boolean => this.count() % 2 === 0);
 
   public userName: WritableSignal<string> = signal('Mundo');
 
