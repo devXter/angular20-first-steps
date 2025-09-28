@@ -1,0 +1,9 @@
+<div class="p-8">
+  <input
+    #searchInput
+    type="text"
+    class="w-full p-2 border rounded"
+    placeholder="Escribe para buscar"
+    (input)="searchTerm.set(searchInput.value)"
+    />
+</div>
